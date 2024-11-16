@@ -1,0 +1,19 @@
+{
+  "name": "hardhat-project",
+  "scripts": {
+    "test": "npx hardhat test",
+    "compile": "npx hardhat compile && npx hardhat size-contracts",
+    "flatten": "npx hardhat flatten contracts/LumozTokenAirdrop.sol > LumozTokenAirdropFlatten.sol && npx hardhat flatten contracts/LumozOGAirdrop.sol > LumozOGAirdropFlatten.sol",
+    "deploy_og": "npx hardhat run ./scripts/deploy_OG_nft.js --network chain"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "4.9.6",
+    "@openzeppelin/contracts-upgradeable": "4.9.6",
+    "@openzeppelin/hardhat-upgrades": "3.1.1",
+    "hardhat": "^2.22.15",
+    "hardhat-dependency-compiler": "^1.2.1",
+    "hardhat-contract-sizer": "^2.10.0"
+  }
+}
